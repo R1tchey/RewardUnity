@@ -75,7 +75,7 @@ public class StarRewardAnimator : MonoBehaviour
             _starAnimationSequence.OnComplete(() => onCompleteCallback());
         }
 
-        _starAnimationSequence.Play(); // 播放序列
+        _starAnimationSequence.Play();
     }
 
 
@@ -99,7 +99,7 @@ public class StarRewardAnimator : MonoBehaviour
     {
         if (_starAnimationSequence != null && _starAnimationSequence.IsActive())
         {
-            _starAnimationSequence.Complete(); // 会直接跳到最终状态并触发OnComplete
+            _starAnimationSequence.Complete(); 
         }
     }
 

@@ -84,12 +84,12 @@ public class MainRewardController : MonoBehaviour
 
         int currentScore = 0;
         DOTween.To(() => currentScore, x => currentScore = x, _finalScore, 1.0f)
-               .OnUpdate(() => scoreText.text = "SCORE\n" + currentScore.ToString("N0"))
+               .OnUpdate(() => scoreText.text = currentScore.ToString("N0"))
                .SetTarget(scoreText);
 
         int currentCoins = 0;
         DOTween.To(() => currentCoins, x => currentCoins = x, _finalCoins, 1.0f)
-               .OnUpdate(() => coinText.text = "COIN\n" + currentCoins.ToString())
+               .OnUpdate(() => coinText.text = currentCoins.ToString())
                .SetTarget(coinText); 
 
         yield return new WaitForSeconds(1.1f); 
